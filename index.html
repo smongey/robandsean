@@ -1,0 +1,443 @@
+
+<!--
+
+          _____                    _____                    _____                    _____                            _____                    _____          
+         /\    \                  /\    \                  /\    \                  /\    \                          /\    \                  /\    \         
+        /::\    \                /::\    \                /::\    \                /::\____\                        /::\____\                /::\    \        
+       /::::\    \               \:::\    \              /::::\    \              /:::/    /                       /:::/    /               /::::\    \       
+      /::::::\    \               \:::\    \            /::::::\    \            /:::/    /                       /:::/    /               /::::::\    \      
+     /:::/\:::\    \               \:::\    \          /:::/\:::\    \          /:::/    /                       /:::/    /               /:::/\:::\    \     
+    /:::/__\:::\    \               \:::\    \        /:::/  \:::\    \        /:::/____/                       /:::/    /               /:::/__\:::\    \    
+   /::::\   \:::\    \              /::::\    \      /:::/    \:::\    \      /::::\    \                      /:::/    /                \:::\   \:::\    \   
+  /::::::\   \:::\    \    ____    /::::::\    \    /:::/    / \:::\    \    /::::::\____\________            /:::/    /      _____    ___\:::\   \:::\    \  
+ /:::/\:::\   \:::\____\  /\   \  /:::/\:::\    \  /:::/    /   \:::\    \  /:::/\:::::::::::\    \          /:::/____/      /\    \  /\   \:::\   \:::\    \ 
+/:::/  \:::\   \:::|    |/::\   \/:::/  \:::\____\/:::/____/     \:::\____\/:::/  |:::::::::::\____\        |:::|    /      /::\____\/::\   \:::\   \:::\____\
+\::/    \:::\  /:::|____|\:::\  /:::/    \::/    /\:::\    \      \::/    /\::/   |::|~~~|~~~~~             |:::|____\     /:::/    /\:::\   \:::\   \::/    /
+ \/_____/\:::\/:::/    /  \:::\/:::/    / \/____/  \:::\    \      \/____/  \/____|::|   |                   \:::\    \   /:::/    /  \:::\   \:::\   \/____/ 
+          \::::::/    /    \::::::/    /            \:::\    \                    |::|   |                    \:::\    \ /:::/    /    \:::\   \:::\    \     
+           \::::/    /      \::::/____/              \:::\    \                   |::|   |                     \:::\    /:::/    /      \:::\   \:::\____\    
+            \::/____/        \:::\    \               \:::\    \                  |::|   |                      \:::\__/:::/    /        \:::\  /:::/    /    
+             ~~               \:::\    \               \:::\    \                 |::|   |                       \::::::::/    /          \:::\/:::/    /     
+                               \:::\    \               \:::\    \                |::|   |                        \::::::/    /            \::::::/    /      
+                                \:::\____\               \:::\____\               \::|   |                         \::::/    /              \::::/    /       
+                                 \::/    /                \::/    /                \:|   |                          \::/____/                \::/    /        
+                                  \/____/                  \/____/                  \|___|                           ~~                       \/____/         
+                                                                                                                                                              
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Pick Us!</title>
+        <meta name="description" content="A microsite CV from Sean and Rob to ual">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQAeV31t4CkoKY-e1cO1CxqYkK4XstzO8&sensor=true"></script>
+    </head>
+    <body onload="initialize()">
+    <!-- DE GOOGLES -->
+    <script type="text/javascript">
+	function initialize() {
+	
+	
+		var latlng = new google.maps.LatLng(56.14555,-4.658203);
+		var settings = {
+			zoom: 5,
+			center: latlng,
+			scrollwheel: false,
+			mapTypeControl: false,
+			mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
+			navigationControl: true,
+			navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL},
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    
+    var map = new google.maps.Map(document.getElementById("map_canvas"), settings);
+    
+        
+	var job = [
+	  {
+	    "featureType": "water",
+	    "stylers": [
+	      { "color": "#47a1f0" },
+	      { "visibility": "on" }
+	    ]
+	  },{
+	    "featureType": "landscape.natural",
+	    "stylers": [
+	      { "color": "#ffc759" }
+	    ]
+	  },{
+	    "stylers": [
+	      { "visibility": "simplified" }
+	    ]
+	  },{
+	    "featureType": "road",
+	    "elementType": "geometry",
+	    "stylers": [
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "featureType": "road",
+	    "stylers": [
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "featureType": "poi",
+	    "stylers": [
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "featureType": "administrative",
+	    "stylers": [
+	      { "color": "#ffc759" },
+	      { "visibility": "off" }
+	    ]
+	  },{
+	    "featureType": "landscape.man_made",
+	    "stylers": [
+	      { "visibility": "on" },
+	      { "color": "#ffc759" }
+	    ]
+	  },{
+	  }
+	];
+	
+	map.setOptions({styles: job}); 
+	
+	var Dublogo = new google.maps.MarkerImage('img/us.png',
+		new google.maps.Size(70,100),
+		new google.maps.Point(0,0),
+		new google.maps.Point(38,84)
+	);
+	var DubShadow = new google.maps.MarkerImage('http://www.eventjunkies.ie/wp-content/themes/synch/images/mapshadow.png',
+		new google.maps.Size(39,25),
+		new google.maps.Point(0,0),
+		new google.maps.Point(1,13)
+	);
+	var DubPos = new google.maps.LatLng(53.337216, -6.25047);
+	var DubMarker = new google.maps.Marker({
+		position: DubPos,
+		map: map,
+		icon: Dublogo,
+		shadow: DubShadow,
+		title:"Detail"
+	});
+	
+	var ldnlogo = new google.maps.MarkerImage('img/ual.png',
+		new google.maps.Size(70,100),
+		new google.maps.Point(0,0),
+		new google.maps.Point(38,84)
+	);
+	var ldnShadow = new google.maps.MarkerImage('http://www.eventjunkies.ie/wp-content/themes/synch/images/mapshadow.png',
+		new google.maps.Size(39,25),
+		new google.maps.Point(0,0),
+		new google.maps.Point(1,13)
+	);
+	var ldnPos = new google.maps.LatLng(51.51829,-0.116343);
+	var ldnMarker = new google.maps.Marker({
+		position: ldnPos,
+		map: map,
+		icon: ldnlogo,
+		shadow: ldnShadow,
+		title:"Detail"
+	});
+	
+	
+	}
+	
+	
+	</script>
+
+    <!-- .DE GOOGLES -->
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+
+        <div id="seanrob">
+        	<li><a class="intro" href="#intro">Intro</a></li>
+	        <li><a class="about" href="#about">About Us</a></li>
+	        <li><a class="past" href="#past">Past</a></li>
+	        <li><a class="work" href="#work">Work</a></li>
+	        <li><a class="skills" href="#skills">Skills</a></li>
+	        <li><a class="map" href="#map">Map</a></li>
+	        <li><a class="contact" href="#contact">Contact</a></li>
+	    </div>
+<div id="yawl">
+        <div class="jumbotron" id="intro">
+            <div class="container">
+            	<div class="row">
+	            	<div class="span10">
+	            	<h1>Hello</h1>
+	            	</div>
+            	</div>
+            </div>
+        </div>       
+
+        <div class="jumbotron" id="about">
+            <div class="container">
+            	<div class="row">
+	            	<div class="span10 offset1">
+	            	 <h2>So you’re looking for two Web Designers to join your team. We (Rob & Seán) have worked together on and off since finishing college.</h2>
+	            	 <h2>We’re pretty tech savvy (we made this little site for you) and we’d love the opportunity to work as part of your team on the ual site.</h2>
+	            	 <h2 style="margin-bottom:145px;">We think 1+1=3 and we hope you do to.</h2>
+	            	 <h1>About Us</h1>
+	            	</div>
+            	</div>
+            	<div class="row">
+	            	<div class="span5">
+		            	<img src="img/profiles/rob1.png" width="125" height="125"/>
+		            	<p><b>Robert Farrelly</b><br/><br/>Working with clients of all shapes and sizes, I believe<br/>in simple creative ideas that intergrate seamlessly across both print and web<br/>based collateral.</p>
+	            	</div>
+	            	<div class="span5 offset2">
+		            	<img src="img/profiles/sean1.png" width="125" height="125"/>
+		            	<p><b>Se&aacute;n Mongey</b><br/><br/>I believe an idea is the springboard to launch any project and I bring together hard work, enthusiam and passion to help bring that<br/>idea to life.</p>
+
+	            	</div>
+            	</div>
+            </div>
+        </div>
+        
+        <div class="jumbotron" id="past">
+            <div class="container">
+            	<div class="row">
+	            	<div class="span4 offset4">
+		            	<h1>Past</h1>
+	            	</div>
+            	</div>
+            	<div class="row">
+	            	<div class="span8 offset2">
+		            	<h3><b>Education</b><br/>—<br/>We graduated from the National College of Art and Design, Ireland in 2008 with honors degrees in Visual Communications. We were lucky in that our graduating class was filled with very passionate and talented designers. This helped create a class culture which encouraged the sharing of knowledge, resources and built a healthy platform for constructive criticism.</h3>
+	            	</div>
+            	</div>
+            	<div class="row">
+	            	<div class="span8 offset2">
+		            	<h3><b>Experience</b><br/>—<br/>When we graduated we each took slightly different paths<br/> which just so happened to intermingle along the way.<br/>See for yourself below</h3>
+	            	</div>
+            	</div>
+            	<div class="row cv">
+            		<div class="span4 offset1">
+	            		<h4>Robert</h4>
+	            		<ul>
+<li><b><a href="http://www.zero-g.ie/" target="_blank">Zero-G</a></b> Jan 09 – Sep 09<br/>Starting life as an intern I quickly worked my way into a junior designer role, learning life in design is as much about the thinking as it is about the details.</li>
+
+<li><b><a href="http://www.unthink.ie/" target="_blank">Unthink</a></b> Oct 09 – June 10<br/>Taking my skills learnt at Zero-G and applying them across a wide variety of creative projects for small businesses and cultural insitutions alike. I learned plenty of skateboarding along the way!</li>
+
+
+<li><b><a href="http://www.creativeinc.ie/" target="_blank">Creative Inc</a></b> July 10 &ndash; Dec 10<br/>Creative Inc gave me my first real opportunity to take the role as lead designer working on some of Ireland’s largest and most well known brands.</li>
+
+
+<li><b>Freelance</b> Jan 11 &ndash; May 11<br/>I spent my first few months getting a taste of life as a freelancer in Australia. I had the chance to work with some of the best design and digital agencies, including <a href="http://hardhatdigital.com.au/" target="_blank">Hard Hat Digital</a>, <a href="http://www.buronorth.com/" target="_blank">Buro North</a>, <a href="http://www.nicedevice.com.au/" target="_blank">Nice Device</a> and <a href="http://www.pidgeon.com.au/" target="_blank">Pidgeon</a>.</li>
+
+
+<li><b><a href="http://www.standapart.com.au/" target="_blank">Interbrand</a></b> Jun 11 &ndash; Dec 11<br/>Recognised as one of worlds leading branding and strategy agency I spent my final six months knuckling down and getting to know some of Australia‘s<br/>best brands.</li>
+
+
+<li><b><a href="http://www.pidgeon.com.au/" target="_blank">Detail</a></b> Jan 12  – Jan 13<br/>After a year of enjoying life down under I decided to come home to the rain. I had the great fortune and opportunity to work with the fine folks of Detail Design Studio as their lead digital designer.</li>
+	            		</ul>
+	            		<a href="Robert-Farrelly-CV.pdf" class="cvlink"><img src="img/dl.png"/>Download full CV pdf</a>
+            		</div>
+            		<div class="span4 offset2">
+	            		<h4>Se&aacute;n</h4>
+	            		<ul>
+<li><b><a href="http://www.threex3.com/" target="_blank">Three&times;3</a></b><br/>The Three&times;3 offers the experience of nine months of internhships in three of Dublin&rsquo;s leading design studios. I was lucky enough to get a place on it!</li>
+
+<li><b><a href="http://www.detail.ie/" target="_blank">Detail</a></b> Aug 08 &ndash; Dec 08<br/>My first 3 months stint was spent at Detail. A fast paced creative studio <br/>which have a variety of artistic and commercial clients.</li>
+
+
+<li><b><a href="http://www.zero-g.ie/" target="_blank">Zero-G</a></b> Jan 09 &ndash; Mar 09<br/>On to Zero-G where I worked with Rob on a broad range of cultural projects. I worked as a designer on the rebranding for the Abbey Theatre, Ireland’s national theatre.</li>
+
+
+<li><b><a href="http://www.atelier.ie/" target="_blank">Atelier</a></b> Apr 09 &ndash; Jun 09<br/>My last stint was at incredibly talented designer David Smith’s studio. The studio has a strong focus on print so I got some great opportunities to work on their<br/>web projects.</li>
+
+
+<li><b><a href="http://www.studioaad.com/" target="_blank">Aad</a></b> Aug 09 &ndash; Jun 12<br/>After finishing the Three&times;3 I got a job as a designer in Aad working on a lot of varied projects, both print and web. Through my interest in web development I also got to build a lot of what I designed there. I also designed and developed the studios identity and website.</li>
+
+
+<li><b><a href="http://www.aokstudio.com/" target="_blank">Freelance</a></b> Aug 12 &mdash; Present<br/>Since leaving Aad I’ve been working under the name A-ok, designing and developing websites and generally getting used to managing my own time.</li>
+	            		</ul>
+	            		<a href="sean-mongey-cv.pdf" class="cvlink"><img src="img/dl.png"/>Download full CV pdf</a>
+            		</div>            		
+            	</div>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="work">
+            <div class="container">
+            	<div class="row">
+	            	<div class="span4 offset4">
+	            	<h1>—<br/>a small<br/>selection<br/>of work<br/>—</h1>
+	            	</div>
+            	</div>
+            	<div class="row">
+	            	<div class="span8 offset2">
+	            	<p>Below we’ve selected a few projects we think show our<br/>diverse skillset as designers &mdash; these however are not the largest or the most prominent projects we’ve worked on. Rather they are the projects that we feel respond best to<br/>your request for designers.</p>
+	            	</div>
+            	</div>
+            	<div class="row">
+	            	<div class="span6">
+	            		<div class="project"><img src="img/work/threex3.jpg"/>
+	            			<div class="info"><h3>Three&times;3</h3><p>Rob worked on the design and build of a site to showcase the people on the Three&times3 programme. Se&aacute;n’s up there too!</p><a href="http://www.threex3.com" target="_blank">Visit Site</a></div>
+	            		</div>
+	            		<div class="project"><img src="img/work/byronscullin.jpg"/>
+	            			<div class="info"><h3>Byron Scullin</h3><p>Rob designed and developed this website for musician Byron Scullin while working with Pete Brundle at <a href="http://www.nicedevice.com.au" target="_blank">Nice Device</a> in Oz.</p><a href="http://www.byronscullin.com/" target="_blank">Visit Site</a></div>
+	            		</div>
+	            		<div class="project"><img src="img/work/ncadmap.jpg"/>
+	            			<div class="info"><h3>NCAD Library Signage</h3><p>Rob and Se&aacute;n worked on the signage system for the Library of thier old college. We won a Bronze ICAD award for this project, which is actually more esteemed than it sounds.</p></div>
+	            		</div>
+	            		<div class="project"><img src="img/work/article.jpg"/>
+	            			<div class="info"><h3>Article</h3><p>Rob developed and identity and graphic language for this successful Dublin shop selling tableware and decorative home accessories.</p><a href="http://www.articledublin.com/" target="_blank">Visit Site</a></div>
+	            		</div>
+	            	</div>
+	            	<div class="span6">
+	            		<div class="project"><img src="img/work/ark.jpg"/>
+	            			<div class="info"><h3>The Ark</h3><p>Se&aacute;n worked on this while at <a href="http://www.studioaad.com" target="_blank">Aad</a>. He was involved with the planning, structure, visual design and the design of an interactive game.</p><a href="http://www.ark.ie" target="_blank">Visit Site</a></div>
+	            		</div>
+	            		<div class="project"><img src="img/work/kasette.jpg"/>
+	            			<div class="info"><h3>Kasette</h3><p>Se&aacute;n and Rob worked together to design and illustrate the packaging for the folk trio Kasette. We got arts and crafty using photo collage of leaves for the graphic language and art directed a photoshoot with <a href="http://richgilligan.com/" target="_blank">Rich Gilligan</a> with them. We love to design for pretty girls!</p></div>
+	            		</div>
+	            		<div class="project"><img src="img/work/argon.jpg"/>
+	            			<div class="info"><h3>Argon Magazine</h3><p>Se&aacute;n worked as the designer and developer of this ongoing digital fashion and culture magazine now approaching it&rsquo;s fourth issue.</p><a href="http://www.argonmagazine.com" target="_blank">Visit Site</a></div>
+	            		</div>
+	            		<div class="project"><img src="img/work/inismeain.jpg"/>
+	            			<div class="info"><h3>Inis Me&aacute;in</h3><p>Se&aacute;n designed and developed this site as a freelance project for <a href="http://www.detail.ie/">Detail</a>. It includes ecommerce and was built on Expression Engine (fancy!).</p><a href="http://www.inismeain.ie" target="_blank">Visit Site</a></div>
+	            		</div>
+	            	</div>
+            	</div>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="skills">
+            <div class="container">
+            	<div class="row">
+	            	<div class="span8 offset2">
+	            	<h1>Skills beyond design</h1>
+	            	</div>
+            	</div>
+            	<div class="row">
+            		<div class="span4 offset4">
+	            		<img src="img/skills.png" alt="Other skills"/>
+	            	</div>
+            	</div>
+            	<div class="row">
+            		<div class="span8 offset2">
+            		<p>We know the state of web design is always evolving. Over time we’ve aimed to expand our understanding into areas that we feel add to our skillset as designers. By learning HTML, CSS, Javascript, PHP and other languages we feel more well-rounded in what we do everyday, whether thats working independently building a small content managed site or as part of a larger team working with other designers, developers and managers.</p>
+            		</div>
+            	</div>
+            </div>
+        </div>
+
+        <div class="jumbotron" id="map">
+            <div class="container" style="position:relative; z-index:1000;">
+            	<div class="row">
+	            	<div class="span8 offset2">
+	            	<h1>DUB > LDN</h1>
+	            	</div>
+            	</div>
+            	<div class="row">
+            		<div class="span8 offset2">
+            		<p>We’re currently located in Dublin, Ireland but happy to<br/>make the jump over to find out more if you think we might<br/>be suitable.</p>	</div>
+            	</div>
+            </div>
+            <div id="map_canvas" style="width:100%; height:1100px; position:relative; z-index:1;"></div>
+        </div>
+
+        <div class="jumbotron" id="contact">
+            <div class="container">
+	            	<div class="row">
+		            	<div class="span8 offset2">
+		            	<h1>Contact</h1>
+		            	</div>
+	            	</div>
+	            	<div class="row">
+	            		<div class="span8 offset2">
+	            		<p>Thanks for putting up with all this and we hope this cv and portfolio site gives you an idea of the passion we have for what we do. Hope to hear from you soon.</p>
+	            		</div>
+	            	</div>
+	            	<div class="row">
+	            		<div class="span5">
+			            	<img src="img/profiles/rob2.png" width="125" height="125"/>
+			            	<h3>Rob</h3>
+			            	<p>Email: <a href="mailto:hello@robertfarrelly.com">hello@robertfarrelly.com</a></p>
+			            	<p>Twitter: <a href="http://www.twitter.com/veryrobert">@veryrobert</a></p>
+			            	<p>Skype: robbiefa</p>
+			            	<p>Website: <a href="http://www.robertfarrelly.com" target="_blank">www.robertfarrelly.com</a></p>
+		            	</div>
+	            		<div class="span5 offset2">
+			            	<img src="img/profiles/sean2.png" width="125" height="125"/>
+			            	<h3>Se&aacute;n</h3>
+			            	<p>Email: <a href="mailto:sean@aokstudio.com">sean@aokstudio.com</a></p>
+			            	<p>Twitter: <a href="http://www.twitter.com/smngy">@smngy</a></p>
+			            	<p>Skype: smongey</p>
+			            	<p>Website: <a href="http://www.aokstudio.com" target="_blank">www.aokstudio.com</a></p>
+			            	</p>
+	            		</div>
+	            	</div>
+            </div>
+            <p class="colophon">Designed and built by us in < 24hrs &nbsp; :)</p>
+        </div>
+</div>        
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            var _gaq=[['_setAccount','UA-38332062-1'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+        <script type="text/javascript">
+		WebFontConfig = { fontdeck: { id: '29228' } };
+		
+		(function() {
+		  var wf = document.createElement('script');
+		  wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+		  '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+		  wf.type = 'text/javascript';
+		  wf.async = 'true';
+		  var s = document.getElementsByTagName('script')[0];
+		  s.parentNode.insertBefore(wf, s);
+		})();
+		</script>
+    </body>
+</html>

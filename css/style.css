@@ -1,0 +1,373 @@
+/* Designed and built by Sean and Rob */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+
+  -webkit-box-sizing: border-box;
+}
+.wf-loading h1,
+.wf-loading p {
+  visibility: hidden;
+}
+body {
+  font-family: "Apercu Regular", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a,
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+}
+input::-moz-focus-inner {
+  border: 0;
+}
+::selection,
+::-moz-selection {
+  background: #fff;
+  color: #333;
+}
+/* COLORS */li {
+  list-style-type: none;
+}
+#seanrob {
+  position: fixed;
+  height: 100px;
+  top: 0px;
+  text-align: center;
+  width: 1000px;
+  margin: 0 auto;
+  left: 50%;
+  margin-left: -500px;
+  z-index: 9999;
+}
+#seanrob li {
+  list-style-type: none;
+  display: inline-block;
+  text-align: center;
+  margin-right: -4px;
+}
+#seanrob li a {
+  display: inline-block;
+  width: 104px;
+  height: 100px;
+  padding: 40px 0px;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-indent: -9999px;
+  -webkit-transition: all ease 0.25s;
+  -moz-transition: all ease 0.25s;
+  -o-transition: all ease 0.25s;
+  transition: all ease 0.25s;
+}
+#seanrob li a:hover {
+  text-decoration: none;
+}
+#seanrob li a.intro {
+  background: url('../img/nav.png') 0px -100px;
+}
+#seanrob li a.intro:hover {
+  background-position: 0px 0px;
+}
+#seanrob li a.about {
+  background: url('../img/nav.png') -105px -100px;
+}
+#seanrob li a.about:hover {
+  background-position: -105px 0px;
+}
+#seanrob li a.past {
+  background: url('../img/nav.png') -210px -100px;
+}
+#seanrob li a.past:hover {
+  background-position: -210px 0px;
+}
+#seanrob li a.work {
+  background: url('../img/nav.png') -315px -100px;
+}
+#seanrob li a.work:hover {
+  background-position: -315px 0px;
+}
+#seanrob li a.skills {
+  background: url('../img/nav.png') -420px -100px;
+}
+#seanrob li a.skills:hover {
+  background-position: -420px 0px;
+}
+#seanrob li a.map {
+  background: url('../img/nav.png') -525px -100px;
+}
+#seanrob li a.map:hover {
+  background-position: -525px 0px;
+}
+#seanrob li a.contact {
+  background: url('../img/nav.png') -630px -100px;
+}
+#seanrob li a.contact:hover {
+  background-position: -630px 0px;
+}
+#intro,
+#about,
+#past,
+#work,
+#skills,
+#map,
+#contact {
+  padding: 120px 0;
+  text-align: center;
+}
+#intro {
+  background: #75d6e0;
+}
+#intro h1 {
+  position: absolute;
+  color: #fff;
+  font: 220px "Apercu Bold", Arial, sans-serif;
+  text-align: center;
+  width: 600px;
+  height: 280px;
+}
+#about,
+#contact {
+  background: #ea5c5c url('../img/about.png') top center;
+  height: 1250px !important;
+}
+#about h2,
+#contact h2 {
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  font-family: "Apercu Bold", Arial, sans-serif;
+  margin-bottom: 15px;
+}
+#about img,
+#contact img {
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -o-border-radius: 80px;
+  border-radius: 80px;
+  margin-bottom: 30px;
+  border: 10px solid #ffffff;
+  -webkit-transition: all ease .2s;
+}
+#about img:hover,
+#contact img:hover {
+  border: 10px solid rgba(255, 255, 255, 0.2);
+}
+#about p,
+#contact p {
+  font-size: 25px;
+  line-height: 34px;
+}
+#about h1,
+#contact h1 {
+  font: 70px "Apercu Bold", Arial, sans-serif;
+  color: #fff;
+}
+#about .span5,
+#contact .span5 {
+  margin-top: 65px;
+  color: #fff;
+  font: 70px "Apercu Bold", Arial, sans-serif;
+}
+#about .span5 b,
+#contact .span5 b {
+  font-size: 28px;
+}
+#past {
+  background: #ea5c5c url('../img/past.gif') center 110px no-repeat;
+  height: 1960px;
+  color: #ea5c5c;
+}
+#past h1 {
+  font: 70px "Apercu Bold", Arial, sans-serif;
+  margin: 70px 0 40px;
+  text-align: center;
+}
+#past h3 {
+  font: 21px/32px "Apercu Bold", Arial, sans-serif;
+}
+#past ul {
+  margin: 0 0 10px 0px;
+}
+#past h4,
+#past li {
+  text-align: left;
+}
+#past li {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 21px;
+}
+#past .cv {
+  margin-top: 60px;
+}
+#past .cv h4 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-left: -2px;
+}
+#past .span4 {
+  text-align: left;
+}
+#past a.cvlink {
+  margin: 20px 0px 0px -30px;
+  padding: 20px 30px 20px 20px;
+  text-align: left;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px;
+  font: 18px/21px "Apercu Bold", Arial, sans-serif;
+  color: #ea5c5c;
+  background: rgba(234, 92, 92, 0);
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+#past a.cvlink img {
+  padding: 0 10px;
+}
+#past a.cvlink:hover {
+  background: rgba(234, 92, 92, 0.1);
+  text-decoration: none;
+}
+#past li a {
+  color: #ea5c5c;
+  text-decoration: none;
+  -webkit-transition: all ease 0.15s;
+  -moz-transition: all ease 0.15s;
+  -o-transition: all ease 0.15s;
+  transition: all ease 0.15s;
+  border-bottom: 1px solid #f9cdcd;
+}
+#past li a:hover {
+  margin-left: 5px;
+  color: #333;
+}
+#work {
+  background: #e6e6e6;
+  height: 1970px;
+}
+#work h1 {
+  text-transform: uppercase;
+  font: 34px/47px "Apercu Bold", Arial, sans-serif;
+  letter-spacing: 2px;
+}
+#work .span8 {
+  margin-bottom: 50px;
+}
+#work .span8 p {
+  font: 21px/32px "Apercu Regular", Arial, sans-serif;
+}
+#work .span6 div {
+  margin-bottom: 20px;
+}
+#work .span6 div .info {
+  width: 420px;
+  height: 280px;
+  margin: -300px 0 0 20px;
+  background: #fff;
+  z-index: 9999px;
+  position: absolute;
+  padding: 40px;
+  display: none;
+  box-shadow: 1px 1px 9px rgba(0, 0, 0, 0.2);
+}
+#work p a {
+  padding: 0;
+  background: none;
+  border-bottom: 1px solid #ddd;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #333;
+}
+#work p a:hover {
+  padding: 0;
+  border-bottom: 3px solid #333;
+  background: none;
+  color: #333;
+}
+#work a {
+  padding: 7px 10px;
+  background: #e6e6e6;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Apercu Bold", Arial, sans-serif;
+  letter-spacing: 2px;
+  color: #000;
+  -webkit-transition: all ease 0.1s;
+  -moz-transition: all ease 0.1s;
+  -o-transition: all ease 0.1s;
+  transition: all ease 0.1s;
+}
+#work a:hover {
+  background: #000;
+  color: #e6e6e6;
+  padding: 10px 13px;
+}
+#skills {
+  background: #ffc759;
+}
+#skills p {
+  position: relative;
+  z-index: 1000;
+}
+#skills img {
+  margin-bottom: 20px;
+}
+#map {
+  background: #46a1f0;
+}
+#contact {
+  background: #ea5c5c;
+}
+#contact a {
+  color: #fff;
+  -webkit-transition: all ease 0.2s;
+  -moz-transition: all ease 0.2s;
+  -o-transition: all ease 0.2s;
+  transition: all ease 0.2s;
+}
+#contact a:hover {
+  opacity: .6;
+  text-decoration: none;
+}
+p.colophon {
+  font-size: 15px !important;
+  font-family: "Apercu Bold", Arial, sans-serif;
+  margin-top: 60px;
+  color: #fff;
+}
+#skills h1,
+#map h1,
+#contact h1 {
+  color: #fff;
+  font: 60px/100px "Apercu Bold", Arial, sans-serif;
+}
+#skills p,
+#map p,
+#contact p {
+  font: 22px/32px "Apercu Regular", Arial, sans-serif;
+  color: #fff;
+}
+#map {
+  height: 1045px;
+  overflow: hidden !important;
+}
+#map_canvas {
+  margin-top: -380px;
+  min-height: 1100px;
+  position: relative;
+  z-index: 1;
+}
+#skills {
+  height: 900px;
+}
+.project p {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
